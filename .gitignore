@@ -1,8 +1,10 @@
 examples 
 our_examples/append/aleph.pl
 our_examples/quicksort/aleph.pl
+our_examples/krk_illegal/aleph.pl
 aleph.pl
 *.zip
 uebung-2.pdf
 *.Z
 chess
+papers
