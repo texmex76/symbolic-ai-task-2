@@ -8,7 +8,6 @@
 :- determination(illegal/6,adj/2).
 :- determination(illegal/6,lt/2).
 
-
 % <(R/C, R/C)
 % Both numbers are either for rows or for columns
 % Row 0 is less than row 1, row 1 is less than row 2, etc.

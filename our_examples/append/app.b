@@ -6,12 +6,14 @@
 %       c. read_all(app).
 %       d. induce.
 
-:- mode(1,app(+list,+any,+any)).
-:- mode(1,((+list) = ([-any|-list]))).
+:- modeh(*,app(+list,+any,+any)).
+:- modeb(*,app(+list,+any,+any)).
+:- mode(*,((+list) = ([-any|-list]))).
+:- mode(1,((+list) = ([]))).
 
 :- set(i,3).
 :- set(noise,0).
 
 
 :- determination(app/3,app/3).
-:- determination(app/3,'='/3).
+:- determination(app/3,'='/2).
