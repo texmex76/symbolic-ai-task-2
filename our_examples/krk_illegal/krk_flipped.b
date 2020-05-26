@@ -11,6 +11,10 @@
 :- set(test_pos,'test.f').
 :- set(test_neg,'test.n').
 
+:- set(noise,500).
+% 5 minutes max searchtime
+:- set(searchtime,300)
+
 % <(R/C, R/C)
 % Both numbers are either for rows or for columns
 % Row 0 is less than row 1, row 1 is less than row 2, etc.

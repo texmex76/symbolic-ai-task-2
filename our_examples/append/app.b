@@ -1,19 +1,15 @@
-% Simple illustration of the learning of recursive predicates
-%       in Aleph
-% To run do the following:
-%       a. [aleph].
-%       b. chdir("<directory>").
-%       c. read_all(app).
-%       d. induce.
 
-:- modeh(*,app(+list,+any,+any)).
-:- modeb(*,app(+list,+any,+any)).
-:- mode(*,((+list) = ([-any|-list]))).
-:- mode(1,((+list) = ([]))).
+%:- modeh(*,app(+any,+any,-any)).
+%:- modeb(*,app(+any,+any,-any)).
+%:- modeb(1,((+list) = ([-any|-list]))).
 
-:- set(i,3).
-:- set(noise,0).
+:- mode(*,append(+listy,+any,+any)).
+:- mode(1,((+listy) = ([-any|-listy]))).
+:- mode(1,((+listy) = ([]))).
+
+%:- set(i,3).
+%:- set(noise,0).
 
 
-:- determination(app/3,app/3).
-:- determination(app/3,'='/2).
+:- determination(append/3,append/3).
+:- determination(append/3,'='/2).

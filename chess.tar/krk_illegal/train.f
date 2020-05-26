@@ -1,3 +1,4 @@
+% illegal test set
 illegal(5,1,7,5,7,5).
 illegal(2,4,1,1,3,5).
 illegal(3,1,4,1,7,1).

@@ -1,19 +1,9 @@
 
-:- modeh(1,illegal(+integer,+integer,+integer,+integer,+integer,+integer)).
-:- mode(1,(+integer)<9).
+!- determination(legal/6,adj/2).
+!- determination(legal/6,lt/2).
 
-:- modeb(1,lt(+integer,+integer)).
-:- modeb(1,adj(+integer,+integer)).
-
-:- determination(illegal/6,adj/2).
-:- determination(illegal/6,lt/2).
-
-:- set(test_pos,'test.f').
-:- set(test_neg,'test.n').
 
 % <(R/C, R/C)
-% Both numbers are either for rows or for columns
-% Row 0 is less than row 1, row 1 is less than row 2, etc.
 lt(0,1).
 lt(0,2).
 lt(0,3).
@@ -43,8 +33,6 @@ lt(5,6).
 lt(5,7).
 lt(6,7).
 
-% Both numbers are either for rows or for columns
-% Row 1 is adjacent to row 0 and row 2, etc.
 % adj(R/C,R/C)
 adj(0,0).
 adj(1,1).
