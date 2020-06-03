@@ -1,6 +1,7 @@
 % append([],Xs,Xs).
 % append([X|Xs],Ys,[X|Zs]) :-
 %    append(Xs,Ys,Zs).
+% the depth (according to the slides) is 0 here
 
 % Learning the base clause
 append([],0,0).
