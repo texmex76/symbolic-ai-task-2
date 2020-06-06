@@ -4,34 +4,22 @@
 % s(Z):-  np(X),  vp(Y),  append(X,Y,Z).
 
 :- mode(*,s(+list)).
-
-:- mode(*,app(+list,+any,+any)).
 :- mode(1, ((+list) = ([-any|-list]))).
-:- mode(1, ((+result) = ([-any|-result]))).
 :- mode(1,np(+list)).
 :- mode(1,vp(+list)).
+:- mode(*,append(-list,-list,+list)).
 
-:- determination(s/1,app/3).
-:- determination(s/1,'='/2).
+%:- determination(s/1,'='/2).
 :- determination(s/1,np/1).
 :- determination(s/1,vp/1).
+:- determination(s/1,append/3).
 
-:- set(i,3).
-
-app([],L,L).
-app([H|T],L2,[H|L3])  :-  app(T,L2,L3). 
+:- set(i,2).
 
 
-np(Z):-  det(X),  n(Y),  append(X,Y,Z).
+np([the,woman]).
+np([a,woman]).
+np([the,man]).
+np([a,man]).
 
-vp(Z):-  v(X),  np(Y),  append(X,Y,Z).
-
-vp(Z):-  v(Z).
-
-det([the]).
-det([a]).
-
-n([woman]).
-n([man]).
-
-v([shoots]).
+vp([shoots]).

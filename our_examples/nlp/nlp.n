@@ -1,1 +1,4 @@
-s([shoots,shoots,shoots,shoots,shoots]).
+s([shoots]).
+s([shoots,shoots]).
+s([the,woman,the,woman]).
+s([man,man,shoots]).
