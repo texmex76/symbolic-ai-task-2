@@ -17,6 +17,9 @@ s([a,man,shoots]).
 s([the,man,shoots,the,woman]).
 s([a,woman,shoots,a,man]).
 
+age([she,is,12,years,old],12).
+age([she,12,years,old],12).
+age([she,123,years,old],123).
 age([24,years,old],24).
 age([32,years,old],32).
 age([44,years,old],45).
@@ -41,8 +44,10 @@ gender([she,is,12,years,old],female).
 gender([the,woman,is,old],female).
 gender([this,is,her,tree],female).
 
-info([the,woman,is,42,years,old],female,42).
-info([the,man,is,62,years,old],male,62).
-info([he,is,16,years,old],male,16).
-info([she,is,55,years,old],female,55).
-info([the,woman,was,44,years,old],female,44).
+illness([has,a,runny,nose],cold).
+illness([has,a,cold],cold).
+illness([sneeze,and,cough],cold).
+
+illness([she,has,loose,stools],diarrhea).
+illness([she,has,diarrhea],diarrhea).
+illness([he,has,diarrhoea],diarrhea).

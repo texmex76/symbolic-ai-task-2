@@ -17,5 +17,3 @@ n([woman]).
 n([man]).
 
 v([shoots]).
-
-conj([and]).

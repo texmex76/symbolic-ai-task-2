@@ -10,16 +10,10 @@
 :- mode(1, ((+list) = ([-any|-list]))).
 :- mode(1,np(+list)).
 :- mode(1,vp(+list)).
-:- mode(1,age(+list,+any)).
-:- mode(1,gender(+list,#any)).
-:- mode(1,info(+list,+any,+any)).
 
 :- mode(1,det(+list)).
 :- mode(1,n(+list)).
 :- mode(1,v(+list)).
-:- mode(1,age(+list)).
-:- mode(1,f(-any)).
-:- mode(1,m(-any)).
 
 :- mode(1,member(+any,+list)).
 :- mode(1,sequence(+list,+list)).
@@ -38,9 +32,32 @@
 :- determination(s/1,vp/1).
 :- determination(s/1,append/3).
 
+det([the]).
+det([a]).
+
+n([woman]).
+n([man]).
+
+v([shoots]).
+v([likes]).
+v([goes]).
+v([does]).
+
+% Analysis of text of a patient.
+
+:- mode(1,age(+list,+any)).
+:- mode(1,gender(+list,#any)).
+:- mode(1,illness(+list,#any)).
+
+:- mode(1,age(+list)).
+:- mode(1,f(-any)).
+:- mode(1,m(-any)).
+:- mode(1,cold(-any)).
+:- mode(1,diarrhea(-any)).
+
+:- determination(age/2, age/2).
 :- determination(age/2, age/1).
 :- determination(age/2, number/1).
-:- determination(age/2, append/3).
 :- determination(age/2, '='/2).
 
 :- determination(gender/2,member/2).
@@ -48,9 +65,9 @@
 :- determination(gender/2,f/1).
 :- determination(gender/2,m/1).
 
-:- determination(info/3,gender/2).
-:- determination(info/3,age/2).
-:- determination(info/3, '='/2).
+:- determination(illness/2,cold/1).
+:- determination(illness/2,diarrhea/1).
+:- determination(illness/2,member/2).
 
 :- set(i,2).
 :- set(explore,true).
@@ -64,15 +81,16 @@ m(his).
 m(he).
 m(man).
 
-det([the]).
-det([a]).
-
 age([years,old]).
+age([years,of,age]).
 
-n([woman]).
-n([man]).
+cold(runny).
+cold(headache).
+cold(cold).
+cold(cough).
+cold(sneeze).
 
-v([shoots]).
-v([likes]).
-v([goes]).
-v([does]).
+diarrhea(loose).
+diarrhea(stools).
+diarrhea(diarrhoea).
+diarrhea(diarrhea).

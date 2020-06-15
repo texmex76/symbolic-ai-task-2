@@ -32,8 +32,6 @@ gender([the,woman,is,old],male).
 gender([he,is,12,years,old],something).
 gender([the,man,is,old],female).
 
-info([he,12,something,something],something,12).
-info([he,is,old],something,12).
-info([12,12,12],something,12).
-info([she,she,she],female,something).
-info([she,she,she],something,something).
+illness([something,something],something).
+illness([something,somthgin],cold).
+illness([something,something],diarrhea).
